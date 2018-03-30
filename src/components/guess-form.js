@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { makeGuess } from '../actions'
+import { makeGuess } from '../actions';
 import './guess-form.css';
 
 export class GuessForm extends React.Component {
