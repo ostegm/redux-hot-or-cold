@@ -25,7 +25,7 @@ export const hotColdReducer = (state = initialState, action) => {
   if (action.type === actions.MAKE_GUESS) {
     const guess = parseInt(action.guess, 10);
     const difference = Math.abs(guess - state.correctAnswer);
-    const feedback = getFeedback(difference)
+    const feedback = getFeedback(difference);
 
     return Object.assign({}, state, {
       guesses: [...state.guesses, guess],
@@ -51,10 +51,9 @@ if (action.type === actions.UPDATE_AURAL_STATUS) {
     }
     
     return Object.assign({}, state, {
-      auralStatus: action.auralStatus
-    }); 
+      auralStatus: action.auralStatus,
+    });
    }
-  
 
   return state;
 };
