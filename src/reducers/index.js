@@ -1,13 +1,13 @@
 import * as actions from '../actions';
 
-const initialState = {
+export const initialState = {
   guesses: [],
   feedback: 'Make your guess!',
   auralStatus: '',
   correctAnswer: Math.round(Math.random() * 100) + 1,
 };
 
-const getFeedback = difference => {
+export const getFeedback = difference => {
   if (difference >= 50) {
     return 'You\'re Ice Cold...';
   } else if (difference >= 30) {
